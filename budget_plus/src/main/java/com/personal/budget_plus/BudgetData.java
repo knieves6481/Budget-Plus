@@ -2,7 +2,9 @@ package com.personal.budget_plus;
 
 import jakarta.persistence.*;
 
-@Entity
+//budget data is the object that is entered into the database, contains purchase categorys, prices, dates, and a unique ID
+
+@Entity //tells the database and repositorys to essentially treat this object as a table
 public class BudgetData {
     
 public BudgetData(String category, float price, String date) 
@@ -24,7 +26,7 @@ public BudgetData()
     private float price;
     private String date;
 
-    // Getters and setters
+    // Getters and setters, unused but good practice
     public String getCategory()
     {
     return category;
