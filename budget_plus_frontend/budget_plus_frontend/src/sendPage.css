@@ -1,0 +1,53 @@
+.category-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.numpad-btn {
+  display: flex;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: #eee;
+  border-radius: 8px;
+  text-align: center;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.numpad-btn:hover {
+  background-color: #ddd;
+}
+
+.display-value {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.send-btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #2b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background-color: #1e62c3;
+}

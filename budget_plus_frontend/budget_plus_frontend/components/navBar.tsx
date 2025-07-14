@@ -1,4 +1,5 @@
 import "../src/NavBar.css"
+import { Link } from 'react-router-dom';
 
 interface NavBarProps {
   brandName: string;
@@ -15,9 +16,9 @@ const NavBar: React.FC<NavBarProps> = ({ imageSrc, brandName, navItems,  }) => {
       </div>
       <div className="nav-right">
         {navItems.map((item, index) => (
-          <a key={index} href="#" className="nav-link">
+          <Link key={index} to={`/${item.toLowerCase()}`} className="nav-link">
             {item}
-          </a>
+          </Link>
         ))}
       </div>
     </nav>
