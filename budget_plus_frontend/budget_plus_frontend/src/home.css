@@ -1,23 +1,23 @@
 .Categories {
-  list-style: none;        /* no bullets                           */
+  list-style: none;       
   padding: 0;
   margin: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));          /* row layout; wraps on small screens  */
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));          
   flex-wrap: wrap;
-  gap: 1.25rem;            /* space between cards                 */
-  justify-content: center; /* center in page                       */
+  gap: 1.25rem;            
+  justify-content: center; 
 }
 
-/* The “rectangular prism” */
+
 .Box {
   display: inline-block;
-  min-width: 140px;        /* card size—tweak as you like          */
+  min-width: 140px;       
   padding: 1rem 1.5rem;
   text-align: center;
-  background: #f4f4f6;     /* light card colour                    */
-  border-radius: 12px;     /* rounded corners                      */
+  background: #f4f4f6;   
+  border-radius: 12px;    
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  text-decoration: none;   /* remove underline                     */
+  text-decoration: none; 
   color: #333;
   font-weight: 600;
   transition: transform .15s, box-shadow .15s;

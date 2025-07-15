@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 interface NavBarProps {
   brandName: string;
   navItems: string[];
-  imageSrc?: string;   // optional image source prop
+  imageSrc?: string;   
 }
 
 const NavBar: React.FC<NavBarProps> = ({ imageSrc, brandName, navItems,  }) => {

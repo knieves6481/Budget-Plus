@@ -1,4 +1,4 @@
-/* src/components/NavBar.css */
+
 
 .custom-navbar {
   position: fixed;
@@ -16,11 +16,11 @@
 }
 
 .nav-logo {
-  height: 40px;          /* adjust size as needed */
+  height: 40px;      
   width: auto;
-  margin-right: 12px;    /* spacing between logo and brand name */
+  margin-right: 12px;  
   vertical-align: middle;
-  border-radius: 4px;    /* optional rounded corners */
+  border-radius: 4px;   
 }
 
 .nav-left .nav-brand {
