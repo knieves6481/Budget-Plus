@@ -1,11 +1,14 @@
 import axios from 'axios';
-import Numpad from './Numpad';
+import Numpad from './numpad.tsx';
 import { useParams } from 'react-router-dom';
 
+function capitalizeFirst(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 const SendPage = () => {
-  const { name } = useParams<{ name?: string }>(); // optional param
-  const category = name ?? 'Unknown'; // fallback to prevent crash
+  const { name } = useParams<{ name?: string }>(); 
+  const category = name ?? 'Unknown'; 
 
   const handleSend = async (amount: number) => {
     const payload = {
@@ -32,7 +35,7 @@ const SendPage = () => {
 
   return (
     <div>
-      <h2>{category}</h2>
+      <h2>{capitalizeFirst(category)}</h2>
       <Numpad onSend={handleSend} />
     </div>
   );

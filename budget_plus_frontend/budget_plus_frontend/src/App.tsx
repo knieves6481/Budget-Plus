@@ -18,7 +18,7 @@ function App() {
       <div style={{ paddingTop: '80px' }}>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<Purchases />} />
+          <Route path="/history" element={<Purchases />} />
           <Route path="/category/:name" element={<SendPage />} />
         </Routes>
       </div>

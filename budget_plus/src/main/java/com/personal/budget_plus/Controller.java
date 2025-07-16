@@ -19,6 +19,9 @@ public class Controller
     @Autowired //sets up dependencies and matching beans 
     private BudgetRepository budgetRepository;
     
+    @Autowired
+    private BudgetService budgetService;
+    
     public BudgetData addBudgetData(@RequestBody BudgetData budgetData)
     {
     return budgetRepository.save(budgetData);
@@ -33,7 +36,7 @@ public class Controller
     @PostMapping //Post tag tells backend to run method when receiving post data
     BudgetData budgetData(@RequestBody BudgetData newItem) 
     {
-      return budgetRepository.save(newItem);
+      return budgetService.save(newItem);
     }
     
     @DeleteMapping

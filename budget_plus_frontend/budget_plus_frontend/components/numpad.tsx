@@ -1,18 +1,14 @@
-// src/components/Numpad.tsx
+
 import { Button, Row, Col } from 'antd';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
 
-const numpadKeys = ['1','2','3','4','5','6','7','8','9','Clear','0','.','Send'];
-
+const numpadKeys = ['1','2','3','4','5','6','7','8','9','Clear','0','.'];
 
 interface NumpadProps {
   onSend: (value: number) => void;
 }
 
 const Numpad: React.FC<NumpadProps> = ({ onSend }) => {
-    const { name } = useParams<{ name?: string }>(); // optional param
-  const category = name ?? 'Unknown'; // fallback to prevent crash
   const [input, setInput] = useState('');
 
   const handleClick = (key: string) => {
@@ -37,7 +33,6 @@ const Numpad: React.FC<NumpadProps> = ({ onSend }) => {
           <Col span={8} key={index}>
             <Button
               block
-              type={key === 'Send' ? 'primary' : key === 'Clear' ? 'default' : 'default'}
               danger={key === 'Clear'}
               onClick={() => handleClick(key)}
             >
@@ -46,6 +41,11 @@ const Numpad: React.FC<NumpadProps> = ({ onSend }) => {
           </Col>
         ))}
       </Row>
+      <div style={{ maxWidth: 80, margin: '0 auto', marginTop: '8px', textAlign: 'center' }}>
+        <Button block type='primary' onClick={() => handleClick('Send')}>
+              Send
+            </Button>
+      </div>
     </div>
   );
 };

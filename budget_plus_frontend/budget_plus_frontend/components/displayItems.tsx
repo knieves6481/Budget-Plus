@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import type { Purchase } from '../src/types/purchase';
 const apiUrl = import.meta.env.VITE_API_URL;
+import "../src/displayItems.css"
 
 const Purchases = () => {       //declaring Purchases component
   const [items, setItems] = useState<Purchase[]>([]);       //declaring 2 variables, taking the purchase state and setting an array up with current state
@@ -30,7 +31,7 @@ const Purchases = () => {       //declaring Purchases component
   }, [items]);
 
   return (
-    <div>
+    <div className="itemList">
       <h2>Items</h2>
 
       {showUpdateNotice && (      //message for data updates
@@ -41,7 +42,7 @@ const Purchases = () => {       //declaring Purchases component
 
       <ul>
         {items.map(item => (       //displays data as bullet points
-          <li key={item.id}>{item.category} (Cost: ${item.price})</li>
+          <li key={item.id}>{item.category} (Cost: ${item.price}) {item.date}</li>
         ))}
       </ul>
     </div>
